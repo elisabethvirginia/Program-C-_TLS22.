@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout<<"Program Konversi Biner ke Desimal\n";//bikin judulnya ya gengs
+    cout<<"=================================";//biar judulnya keren aja
+    cout<<endl;//buat kita end line 7 dan 8
+    
+    int biner, des=0, i=1, sisa;//memperkenalkan variabel
+    cout<<"input angka biner:";//bikin perintah yg ditampilkan
+    cin>>biner;//input nilai variabel biner
+    
+    cout<<"angka desimal dari "<<biner;//jadi ini adalah output yg nanti akan ditampilkan
+    
+    while(biner!=0)//looping
+    {
+      sisa = biner % 10;//buat nyari remain
+      des = des + (sisa*i);//memperbaharui value des
+      i = i*2;//memperbaharui value i
+      biner = biner/10;//memperbaharui valuenya biner
+    }
+ 
+    cout << " adalah = " << des;//output yg akan dihasilkan setekah looping while
+    cout << endl;
+
+    return 0;
+}
